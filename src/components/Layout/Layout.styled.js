@@ -46,5 +46,5 @@ export const StyledLink = styled(NavLink)`
 export const Footer = styled.footer`
   text-align: center;
   padding: 6px 12px;
-  border-top: 3px solid #c0c0c0;
+  border-top: 3px solid #6a679e;
 `;

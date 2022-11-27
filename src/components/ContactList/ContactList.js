@@ -8,19 +8,26 @@ import { removeContact } from '../../redux/contactSlice';
 
 export const ContactList = () => {
   const contacts = useSelector(state => state.contacts.contacts);
+  const filter = useSelector(state => state.filter.filter);
   const dispatch = useDispatch();
-  // const onDeleteContact = contactId => {
-  //   dispatch(removeContact({ id: contactId }));
-  // };
+
+  const filterContactsList = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
+
   return (
     <SC.ContactListUl>
-      {contacts.map(({ name, number, id }) => (
+      {filterContactsList.map(({ name, number, id }) => (
         <SC.ContactListLi key={id}>
-          <FcPhoneAndroid />
-          {name}: {number}
+          <SC.ContactCard>
+            <FcPhoneAndroid />
+            <SC.ContactTitle>
+              {name}: {number}
+            </SC.ContactTitle>
+          </SC.ContactCard>
+
           <SC.ButtonDelete
             type="button"
-            // onClick={() => onDeleteContact(id)}
             onClick={() => dispatch(removeContact({ id }))}
           >
             Delete
@@ -32,7 +39,6 @@ export const ContactList = () => {
 };
 
 ContactList.propTypes = {
-  deleteContact: propTypes.func,
   contacts: propTypes.arrayOf(
     propTypes.exact({
       id: propTypes.string.isRequired,

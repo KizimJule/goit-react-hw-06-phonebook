@@ -51,37 +51,47 @@ export function ContactForm() {
     reset();
   };
   return (
-    <SC.Form onSubmit={handleSubmit}>
-      <SC.Label htmlFor={NameInputId}>
-        Name
-        <SC.Input
-          onChange={handleInputChange}
-          value={name}
-          type="text"
-          name="name"
-          placeholder="Name"
-          id={NameInputId}
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-        />
-      </SC.Label>
-      <SC.Label htmlFor={NumberInputId}>
-        Number
-        <SC.Input
-          value={number}
-          onChange={handleInputChange}
-          type="tel"
-          name="number"
-          placeholder="Number"
-          id={NumberInputId}
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-        />
-      </SC.Label>
-      <SC.ButtonForm type="submit">Add contact</SC.ButtonForm>
-    </SC.Form>
+    <SC.Screen>
+      <SC.ScreenContent>
+        <SC.Form onSubmit={handleSubmit}>
+          <SC.Label htmlFor={NameInputId}>
+            Name
+            <SC.Input
+              onChange={handleInputChange}
+              value={name}
+              type="text"
+              name="name"
+              placeholder="Name"
+              id={NameInputId}
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              required
+            />
+          </SC.Label>
+          <SC.Label htmlFor={NumberInputId}>
+            Number
+            <SC.Input
+              value={number}
+              onChange={handleInputChange}
+              type="tel"
+              name="number"
+              placeholder="Number"
+              id={NumberInputId}
+              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+              required
+            />
+          </SC.Label>
+          <SC.ButtonForm type="submit">Add contact</SC.ButtonForm>
+        </SC.Form>
+      </SC.ScreenContent>
+      <SC.ScreenBackground>
+        <SC.ScreenBackgroundShape4></SC.ScreenBackgroundShape4>
+        <SC.ScreenBackgroundShape3></SC.ScreenBackgroundShape3>
+        <SC.ScreenBackgroundShape2></SC.ScreenBackgroundShape2>
+        <SC.ScreenBackgroundShape1></SC.ScreenBackgroundShape1>
+      </SC.ScreenBackground>
+    </SC.Screen>
   );
 }
 
