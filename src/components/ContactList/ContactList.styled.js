@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactListUl = styled.ul`
-  font-size: 24px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,8 +14,8 @@ export const ContactListLi = styled.li`
   justify-content: space-between;
   border: 1px solid black;
   list-style-position: inside;
-  width: 450px;
-  padding: 20px;
+  width: 360px;
+  padding: 8px;
 `;
 export const ContactTitle = styled.p`
   margin: 0;
@@ -30,12 +30,12 @@ export const ContactCard = styled.div`
 `;
 export const ButtonDelete = styled.button`
   background: #fff;
-  font-size: 14px;
-  padding: 8px 10px;
+  font-size: 10px;
+  padding: 6px 8px;
   border-radius: 26px;
   border: 1px solid #d4d3e8;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   display: flex;
   align-items: center;
   color: #4c489d;

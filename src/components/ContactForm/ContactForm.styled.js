@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Screen = styled.div`
   background: linear-gradient(90deg, #5d54a4, #7c78b8);
   position: relative;
-  width: 380px;
+  width: 300px;
   box-shadow: 0px 0px 24px #5c5696;
 `;
 export const ScreenContent = styled.div`
@@ -13,20 +13,20 @@ export const ScreenContent = styled.div`
 `;
 
 export const Form = styled.form`
-  margin: 0 auto;
-  width: 320px;
-  padding: 30px;
+  /* margin: 0 auto; */
+  width: 260px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 14px;
 `;
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
-  font-size: 20px;
+  gap: 6px;
+  font-size: 16px;
   font-weight: 600;
   color: #4c489d;
 `;
@@ -34,8 +34,8 @@ export const Input = styled.input`
   border: none;
   border: 2px solid #d1d1d4;
   background: none;
-  padding: 8px;
-  font-weight: 700;
+  padding: 6px;
+  font-weight: 600;
   width: 85%;
   transition: 0.2s;
   &:hover,
@@ -47,12 +47,12 @@ export const Input = styled.input`
 `;
 export const ButtonForm = styled.button`
   background: #fff;
-  font-size: 14px;
-  padding: 16px 20px;
+  font-size: 12px;
+  padding: 8px 10px;
   border-radius: 26px;
   border: 1px solid #d4d3e8;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   display: flex;
   align-items: center;
   color: #4c489d;
